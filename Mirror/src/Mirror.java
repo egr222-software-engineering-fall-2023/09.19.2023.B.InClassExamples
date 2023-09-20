@@ -15,18 +15,18 @@ public class Mirror {
     public static void topHalf() {
         for (int line = 1; line <= SIZE; line++) {
             System.out.print("|");
-            for (int i =1; i<= -2*line+2*SIZE; i++) {
-                System.out.print(" ");
-            }
+            printString(" ", -2*line+2*SIZE);
             System.out.print("<>");
-            for (int i= 1; i <= 4*line-4; i++) {
-                System.out.print(".");
-            }
+            printString(".", 4*line-4);
             System.out.print("<>");
-            for (int i =1; i<= -2*line+2*SIZE; i++) {
-                System.out.print(" ");
-            }
+            printString(" ", -2*line+2*SIZE);
             System.out.println("|");
+        }
+    }
+
+    private static void printString(String s, int n) {
+        for (int i =1; i<= n; i++) {
+            System.out.print(s);
         }
     }
 
